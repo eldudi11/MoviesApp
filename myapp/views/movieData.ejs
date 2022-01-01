@@ -1,0 +1,29 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <h1><%=movie.name %></h1>
+
+        <img src="<%=movie.image %>" alt="">  
+         
+        <br/>
+        <p><% movie.genres.forEach(g => { %>
+        <%= g %>    
+        <% }) %>
+        </p>
+        
+        <p><%=movie.language%></p>
+        <p>Premiered in <%=movie.premiered%></p>
+        <p><%=movie.summary%></p>
+
+       <button><a href="../../menu">back to menu </a></button> 
+       <button><a href="../../search">Back to search page</a></button> 
+
+
+        
+        
+
+    </body>
+</html>

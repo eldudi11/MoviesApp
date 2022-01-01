@@ -1,0 +1,30 @@
+<html>
+    <body>
+        
+        <h1>Create new movie</h1>
+
+        <form action="createMovie/getdata" method="POST">
+
+         <p>   Name: <input type="text" name="name"></p>
+         <p>  Language: <input type="text" name="language"></p> 
+         <p> </select>
+        
+            Genre: <select name="genre" id="genre">
+                <option value=""></option>
+            <% genres.forEach(x => { %>
+                <option value="<%= x %>"><%= x %></option>
+            <% }) %>
+        </p> 
+                
+            </select>
+           
+            <input type="submit" value="create">
+            
+           
+           
+        </form>
+
+        <button><a href="../../menu">back to menu </a></button> 
+
+    </body>
+</html>

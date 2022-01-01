@@ -1,0 +1,18 @@
+<html>
+    <body>
+        
+        <h3>this is result page</h3>
+
+        <% movies.forEach(x => { %>
+            <a href="/search/getmovie/<%=x.id%> "><%=x.name%></a> 
+            <br/>
+        <% }) %>
+
+       <button><a href="../../menu">back to menu </a></button> 
+       <button><a href="../../search">Back to search page</a></button>
+
+       
+
+
+    </body>
+</html>

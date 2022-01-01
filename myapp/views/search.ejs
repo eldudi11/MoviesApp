@@ -1,0 +1,40 @@
+<html>
+    <body>
+
+        <h3>this is search page</h3>
+        <form action="search/getdata" method="POST">
+
+            name: <input type="text" name="name"><br/>
+
+            language: <select name="language" id="language">
+                <option value="">Any</option>
+            <% langs.forEach(x => { %>
+                <option value="<%= x %>"><%= x %></option>
+            <% }) %> 
+        </select>
+        <br/>
+            Genre: <select name="genre" id="genre">
+                <option value="">Any</option>
+            <% genres.forEach(x => { %>
+                <option value="<%= x %>"><%= x %></option>
+            <% }) %>
+
+                
+            </select>
+            <br/>
+
+
+            <input type="submit" value="Search">
+
+        </form>
+
+        <button><a href="../../menu">back to menu </a></button> 
+
+
+            
+
+        
+     
+
+    </body>
+</html>
