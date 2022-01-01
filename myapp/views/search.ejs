@@ -1,13 +1,13 @@
 <html>
     <body>
-        <button><a href="../../menu">back to menu </a></button> <br/>
-        <h3>this is search page</h3>
+        <button><a href="../../menu">Back to menu</a></button> <br/>
+        <h3>This is search page</h3>
         
         <form action="search/getdata" method="POST">
 
-            name: <input type="text" name="name"><br/>
+            Name: <input type="text" name="name"><br/>
 
-            language: <select name="language" id="language">
+            Language: <select name="language" id="language">
                 <option value="">Any</option>
             <% langs.forEach(x => { %>
                 <option value="<%= x %>"><%= x %></option>

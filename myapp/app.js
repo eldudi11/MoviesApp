@@ -9,7 +9,7 @@ var loginRouter = require('./routes/login');
 var menuRouter = require('./routes/menu');
 var searchRouter = require('./routes/search');
 var createMovieRouter = require('./routes/createMovie');
-
+var createUserRouter = require('./routes/createUser');
 
 var app = express();
 
@@ -30,6 +30,7 @@ app.use('/users', usersRouter);
 app.use('/menu', menuRouter);
 app.use('/search', searchRouter);
 app.use('/createMovie', createMovieRouter);
+app.use('/createUser', createUserRouter);
 
 
 

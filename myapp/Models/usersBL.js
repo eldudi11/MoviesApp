@@ -19,7 +19,7 @@ const getUsers = function()
 }
 
 
-const createPerson = function(obj)
+const createUser = function(obj)
 {
     return new Promise((resolve,reject) =>
     {
@@ -43,4 +43,4 @@ const createPerson = function(obj)
     })
 }
 
-module.exports = {createPerson, getUsers};
+module.exports = {createUser, getUsers};
