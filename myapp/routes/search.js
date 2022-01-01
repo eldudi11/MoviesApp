@@ -1,4 +1,5 @@
 var express = require('express');
+const jsdom = require('jsdom');
 const utils = require('../utils');
 const { move } = require('.');
 var router = express.Router();
@@ -37,7 +38,7 @@ router.post('/getdata',async function(req, res, next)
     let moviesData = await moviesBL.getMoviesData();
 
     let lang =  req.body.language;
-    let name = req.body.name;
+    let name = req.body.name.toLowerCase();
     let genre = req.body.genre;
 
     let matches = [];
@@ -45,7 +46,7 @@ router.post('/getdata',async function(req, res, next)
 
     moviesData.forEach(movie =>{
 
-      if(movie.name.indexOf(name) == -1)
+      if(movie.name.toLowerCase().indexOf(name) == -1)
       {
         isFit = false;
       }
@@ -85,8 +86,10 @@ router.get('/getmovie/:id',async function(req, res, next)
     let id = req.params.id;
     let movie = moviesData.find(x => (x.id == id));
 
-  
-
+    // convert html string to html
+    const dom = new jsdom.JSDOM(movie.summary);
+    movie.summary = dom.window.document.querySelector("html").textContent;
+    
     res.render('movieData',{movie : movie});
 
     
