@@ -1,18 +1,13 @@
 * {
   box-sizing: border-box;
 }
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100&display=swap");
 :root {
   font-size: 62.5%;
 }
 
 body {
   font-family: "Heebo", sans-serif;
-  font-size: 1.4rem;
-  margin: 0;
-  --margin-left: 5rem;
   height: 100%;
-  margin: 0;
 }
 
 header {
@@ -20,59 +15,36 @@ header {
   flex-direction: column;
   position: relative;
   align-items: center;
-  text-align: center;
-  height: auto;
-  padding: 3rem;
-  padding-bottom: 0.1rem;
-  padding-left: var(--margin-left);
-
-  /* background image */
-  background-image: url(../images/mainImage.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  margin-top: 16rem;
 }
 
 main {
   height: auto;
   padding: 2rem;
-  padding-left: var(--margin-left);
   background-color: #ffffff;
-  min-height: 61%;
-  padding-bottom: 50px;
-  margin-bottom: -50px;
-}
-
-.formbox {
   display: flex;
   flex-direction: column;
   position: relative;
   align-items: center;
-  text-align: center;
 }
-footer {
-  height: 50px;
 
-  width: 100%;
+.formbox {
+  width: 450px;
 
-  padding-left: var(--margin-left);
-  background-color: black;
-  color: #ffffff;
-
-  /** dont let the footer get over the article **/
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .logo {
-  margin: 16px;
-  font-size: 96px;
-  color: #ccc;
+  font: normal normal normal 86px/126px "Heebo";
+  color: #6b6b6b;
   text-transform: uppercase;
-  font-weight: 600;
+  margin: -40px;
 }
 
 /**  form **/
 form ul {
-  font-family: "Lato", sans-serif;
 }
 
 form ul li {
@@ -83,16 +55,36 @@ form ul li {
 }
 
 form ul label {
+  color: black;
   margin: 0 0 3px 0;
-  padding: 0px;
+
   display: block;
-  font-weight: bold;
+  text-align: left;
+  font: normal normal normal 20px/29px Heebo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+form ul input[type="text"] {
+  background: #edf5f3 0% 0% no-repeat padding-box;
+  border-radius: 23px;
+  opacity: 1;
+  border-style: none;
+  width: 400px;
+  height: 45px;
 }
 form ul input[type="submit"] {
-  background: #fabb51;
+  background: #28b498 0% 0% no-repeat padding-box;
+  border-radius: 29px;
   padding: 8px 15px 8px 15px;
   border: none;
-  color: #fff;
+  width: 277px;
+  height: 45px;
+  color: white;
+  font: normal normal normal 20px/29px Heebo;
+  position: absolute; /* new */
+  left: 50%;
+  transform: translateX(-50%);
 }
 form ul input[type="submit"]:hover {
   background: #ef5849;
@@ -111,37 +103,26 @@ h2 {
   font-weight: 900;
 }
 
-img {
-  max-width: 30rem;
-  float: left;
-  padding-right: 1.5rem;
-  padding-bottom: 0.8rem;
-}
-
-a:active {
-  color: rgb(136, 125, 125);
-}
-
 /***** nevigation bar *****/
 nav {
-  margin: 25px;
-
-  padding: 16px;
+  width: 450px;
 }
 nav ul {
   list-style: none;
   display: flex;
 }
 
-nav li {
-  margin-right: 50px;
+nav ul li {
+  margin-right: 2rem;
 }
 
 nav ul li a {
-  color: #8f8f8f;
-  font-size: 24px;
-  font-weight: 400;
-  text-decoration: none;
+  text-align: left;
+  text-decoration: underline;
+  font: normal normal normal 23px/34px Heebo;
+  letter-spacing: 0px;
+  color: #6b6b6b;
+  opacity: 1;
 }
 nav ul li a:hover {
   color: #ef5849;
