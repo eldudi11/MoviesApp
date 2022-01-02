@@ -1,18 +1,48 @@
 <html>
-    <body>
-        
-        <%= messege %>
-        <form action="login" method="POST">
+  <head>
+    <meta charset="utf-8" />
+    <title>movie app</title>
 
-            User: <input type="text" name="username"><br/>
-            Password: <input type="text" name="password"><br/>
-            <input type="submit" value="Login">
-
-        </form>
-
-        <button><a href="../../createUser">Sign in</a></button>
-        <button><a href="../../menu">Login as a guest</a></button>
-
-
-    </body>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <span class="logo">WatchDB</span>
+      <h2>What can we say? we like to watch and tell</h2>
+      <nav>
+        <ul>
+          <li><a href="../../createUser">Sign up</a></li>
+          <li><a href="../../menu">Login as a guest</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form action="login" method="POST">
+        <ul>
+          <p><%= messege %></p>
+          <li><label>User</label><input type="text" name="username" /></li>
+          <li><label>Password</label><input type="text" name="password" /></li>
+          <br />
+          <input type="submit" value="Login" />
+        </ul>
+      </form>
+    </main>
+    <footer>
+      <p>All the rights for dudi elbling</p>
+    </footer>
+  </body>
 </html>

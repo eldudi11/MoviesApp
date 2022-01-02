@@ -1,18 +1,40 @@
 <html>
-    <body>
-        
-        <h1>Register</h1>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <span class="logo">WatchDB</span>
+      <h2>What can we say? we like to watch and tell</h2>
+      <nav>
+        <ul>
+          <li><a href="../../login">Login page</a></li>
+          <li><a href="../../menu">Login as a guest</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="formbox">
 
         <form action="createUser/getdata" method="POST">
-
-         <p>Username <input type="text" name="username"></p>
-         <p>Password: <input type="text" name="password"></p> 
-        
-            <input type="submit" value="sign in">
-            
+          <ul>
+            <h3>Join us - its that easy</h3>
+            <li><label>User</label><input type="text" name="username" /></li>
+            <li><label>Password</label><input type="text" name="password" /></li>
+            <br />
+            <input type="submit" value="Sign up" />
+          </ul>
         </form>
-
-        <button><a href="../../login">Back to login page</a></button> 
-        <button><a href="../../menu">Login as a guest</a></button> 
-    </body>
+      </main>
+    </div>
+    <footer></footer>
+  </body>
 </html>
