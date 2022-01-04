@@ -1,38 +1,50 @@
 <html>
-    <head>
+  <head>
+    <meta charset="utf-8" />
+    <title>movie app</title>
 
-    </head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <span class="logo">WatchDB</span>
+      <h2>What can we say? we like to watch and tell</h2>
+      <nav>
+        <ul>
+          <li><a href="../../menu">Menu</a></li>
+          <li><a href="createMovie">Add Movie</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <body>
-        <header>
-
-        </header>
-        
-        <main>
-
-            <h1>Create new movie</h1>
-            
-            <form action="createMovie/getdata" method="POST">
-                
-                <p>   Name: <input type="text" name="name"></p>
-                <p>  Language: <input type="text" name="language"></p> 
-                <p> </select>
-                    
-                    Genre: <select name="genre" id="genre">
-                        <option value=""></option>
-                        <% genres.forEach(x => { %>
-                            <option value="<%= x %>"><%= x %></option>
-                            <% }) %>
-                        </p> 
-                        
-                    </select>
-                    
-                    <input type="submit" value="create">
-    
-                </form>
-            </main>
-
-        <button><a href="../../menu">Back to menu</a></button> 
-
-    </body>
+    <main>
+      <h2>Create new movie</h2>
+      <div class="formbox">
+        <form action="createMovie/getdata" method="POST">
+          <ul>
+            <li><label>Name</label><input type="text" name="name" /></li>
+            <li>
+              <label>Language</label><input type="text" name="language" />
+            </li>
+            <li>
+              <label>Genre</label>
+              <select name="genre" id="genre">
+                <option value=""></option>
+                <% genres.forEach(x => { %>
+                <option value="<%= x %>"><%= x %></option>
+                <% }) %>
+              </select>
+            </li>
+            <input type="submit" value="create" />
+          </ul>
+        </form>
+      </div>
+    </main>
+  </body>
 </html>

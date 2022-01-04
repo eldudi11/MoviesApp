@@ -15,7 +15,7 @@ header {
   flex-direction: column;
   position: relative;
   align-items: center;
-  margin-top: 16rem;
+  margin-top: 12rem;
 }
 
 main {
@@ -29,18 +29,21 @@ main {
 }
 
 .formbox {
-  width: 450px;
-
+  width: 475px;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
 .logo {
-  font: normal normal normal 86px/126px "Heebo";
-  color: #6b6b6b;
+  text-align: left;
+font: normal normal normal 86px/126px Heebo;
+letter-spacing: 0px;
+color: #6B6B6B;
+opacity: 1;
   text-transform: uppercase;
   margin: -40px;
+  font-weight: 200;
 }
 
 /**  form **/
@@ -57,13 +60,13 @@ form ul li {
 form ul label {
   color: black;
   margin: 0 0 3px 0;
-
   display: block;
   text-align: left;
   font: normal normal normal 20px/29px Heebo;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
+  font-weight: 200;
 }
 form ul input[type="text"] {
   background: #edf5f3 0% 0% no-repeat padding-box;
@@ -72,11 +75,25 @@ form ul input[type="text"] {
   border-style: none;
   width: 400px;
   height: 45px;
+  padding-left: 10px;
 }
+
+form select {
+  background: #edf5f3 0% 0% no-repeat padding-box;
+  border-radius: 23px;
+  opacity: 1;
+  border-style: none;
+  width: 195px;
+  height: 45px;
+  padding-left: 10px;
+  
+}
+
+
+
 form ul input[type="submit"] {
   background: #28b498 0% 0% no-repeat padding-box;
   border-radius: 29px;
-  padding: 8px 15px 8px 15px;
   border: none;
   width: 277px;
   height: 45px;
@@ -85,6 +102,8 @@ form ul input[type="submit"] {
   position: absolute; /* new */
   left: 50%;
   transform: translateX(-50%);
+  margin-top: 3rem;
+  font-weight: 200;
 }
 form ul input[type="submit"]:hover {
   background: #ef5849;
@@ -98,14 +117,18 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+ 
   color: #ef5849;
-  font-weight: 900;
+  
+  font: normal normal normal 21px/34px Heebo;
+letter-spacing: 0px;
+
+font-weight: 200;
 }
 
 /***** nevigation bar *****/
 nav {
-  width: 450px;
+  width: 475px;
 }
 nav ul {
   list-style: none;
@@ -123,44 +146,119 @@ nav ul li a {
   letter-spacing: 0px;
   color: #6b6b6b;
   opacity: 1;
+  font-weight: 200;
 }
 nav ul li a:hover {
   color: #ef5849;
 }
 
-/***** social media *****/
 
-.social-media-icons ul {
-  list-style: none;
-  text-align: center;
-  background-color: black;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 85%;
+
+/*** Movie list results ***/
+
+.items-body-content {
+  padding: 10px;
+  padding-right: 0px;
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  grid-gap: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
 }
 
-.social-media-icons a {
-  display: inline-block;
+.items-body-content a {
   text-decoration: none;
+  font-size: 18px;
 }
 
-.social-media-icons a:nth-child(1) i {
-  color: #d34836;
+.items-body-content:hover {
+  border-radius: 50px;
+  background-color: #edf5f3;
 }
 
-.social-media-icons a:nth-child(2) i {
-  color: #4099ff;
+.items-body {
+  padding: 10px;
+  margin: 10px;
+  display: grid;
+  grid-gap: 10px;
+  text-align: center;
 }
 
-.social-media-icons a:nth-child(3) i {
-  color: #b31217;
+.selectBinder {
+  display: inline-block;
 }
 
-.social-media-icons a:nth-child(4) i {
-  color: #ff6600;
+.selectBox {
+  display: inline-block;
+  margin-right: 1rem;
 }
 
-.social-media-icons a i:hover {
-  color: white;
+.movieDataBox {
+  width: 420px;
+  display: flex;
+  padding: 1rem;
 }
+
+.imageBox {
+  width: 147px;
+  height: 188px;
+  display: flex: 1;
+  margin-right: 1rem;
+  
+  
+}
+
+.imageBox img{
+  max-width: 100%;
+  max-height: 100%;
+  image
+}
+
+.contentBox {
+  width: 220px;
+  height: 188px;
+  display: flex: 1;
+  position:relative;
+  display: flex;
+  flex-direction: column;
+}
+.movieName{
+  font: normal normal bolder 20px/29px Heebo;
+  color: black;
+  
+}
+.bottomText{
+  position: absolute;
+  bottom: -5px;
+  font: normal normal normal 15px/24px Heebo;
+letter-spacing: 0px;
+color: #000000;
+font-weight: 200;
+}
+
+.movieGenre{
+  font: normal normal normal 16px/24px Heebo;
+  letter-spacing: 0px;
+  color: #28B498;
+  margin: 0px;
+  font-weight: 200;
+}
+
+.movieLang{
+font: normal normal normal 16px/24px Heebo;
+letter-spacing: 0px;
+color: #000000;
+opacity: 0.5;
+}
+
+.movieDataBox p{
+font: normal normal normal 15px/24px Heebo;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+font-weight: 200;
+}
+
+
+
+
