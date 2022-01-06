@@ -35,6 +35,11 @@ main {
   position: relative;
 }
 
+.middleBox{
+width: 400px;
+margin: 10px;
+margin-bottom: 20px;
+}
 .logo {
   text-align: left;
 font: normal normal normal 86px/126px Heebo;
@@ -47,6 +52,9 @@ opacity: 1;
 }
 
 /**  form **/
+li{
+list-style: none;
+}
 form ul {
 }
 
@@ -89,8 +97,24 @@ form select {
   
 }
 
+input[type="text"] 
+{
 
+  background: #edf5f3 0% 0% no-repeat padding-box;
+  border-radius: 23px;
+  opacity: 1;
+  border-style: none;
+  width: 350px;
+  height: 45px;
+  margin-right: 10px;
+    padding-left: 10px;
 
+}
+
+.searchIcon{
+  font-size:25px;
+  -webkit-text-stroke: 2px white;
+}
 form ul input[type="submit"] {
   background: #28b498 0% 0% no-repeat padding-box;
   border-radius: 29px;
@@ -109,6 +133,9 @@ form ul input[type="submit"]:hover {
   background: #ef5849;
 }
 
+a{
+  color: black;
+}
 /***** headers *****/
 h1 {
   font-size: 3rem;
@@ -169,6 +196,7 @@ nav ul li a:hover {
 .items-body-content a {
   text-decoration: none;
   font-size: 18px;
+  font-weight: 200;
 }
 
 .items-body-content:hover {
