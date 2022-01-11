@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>movie app</title>
+
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <span class="logo">WatchDB</span>
+      <h2>What can we say? we like to watch and tell</h2>
+      <nav>
+        <ul>
+          <li><a href="../../menu">Menu</a></li>
+          <li><a href="../../search">Back to search page</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="movieDataBox">
+        <div class="imageBox">
+          <img src="<%=movie.image %>" alt="" />
+        </div>
+        <div class="contentBox">
+          <span class="movieName"><%=movie.name %></span>
+          <span class="movieGenre"
+            ><% movie.genres.forEach(g => { %> <%= g %> <% }) %></span
+          >
+
+          <span class="movieLang"> <%=movie.language%></span>
+          <span class="bottomText">Premiered in <%=movie.premiered%></span>
+        </div>
+      </div>
+      <div class="movieDataBox">
+        <p><%=movie.summary%></p>
+      </div>
+    </main>
+  </body>
+</html>
