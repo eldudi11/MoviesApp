@@ -16,15 +16,12 @@ router.post("/", async function (req, res, next) {
   let inputLanguage = req.body.language;
   let inputGenre = req.body.genre;
 
-  console.log("its said" + inputGenre);
-
   if (inputName === "" || inputGenre === "" || inputLanguage === "") {
     res.render("createMovie", {
       genres: allGenres,
       errMsg: "Please fill all the fields",
     });
-  }
-  if (
+  } else if (
     moviesData.find((x) => x.name.toLowerCase() === inputName.toLowerCase()) !==
     undefined
   ) {
@@ -32,18 +29,18 @@ router.post("/", async function (req, res, next) {
       genres: allGenres,
       errMsg: "Movie Name is exist",
     });
+  } else {
+    let obj = {
+      id: await utils.getID(),
+      name: req.body.name,
+      language: req.body.language,
+      genre: req.body.genre,
+    };
+
+    let result = await newMoviesBL.createMovie(obj);
+
+    res.redirect("/menu");
   }
-
-  let obj = {
-    id: await utils.getID(),
-    name: req.body.name,
-    language: req.body.language,
-    genre: req.body.genre,
-  };
-
-  let result = await newMoviesBL.createMovie(obj);
-
-  res.redirect("/menu");
 });
 
 module.exports = router;
