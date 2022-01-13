@@ -22,7 +22,7 @@ router.post("/login", async function (req, res, next) {
     messege = "incorrect password";
     res.render("login", { messege: messege });
   } else {
-    res.render("menu", { username: found.Username });
+    res.redirect("/menu");
   }
 });
 
