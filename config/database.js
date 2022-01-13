@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-mongoose.connect('mongodb://localhost:27017/usersDB')
-
+mongoose.connect(
+  "mongodb+srv://eldudi11:Dd020192@davidcluster.nzbuo.mongodb.net/usersDB"
+);
